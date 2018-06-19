@@ -12,7 +12,14 @@ int main(){
     scanf("%d", &A[i]);
   }
 
-
-
+  lb = 0, ub = n;
+  while (lb != ub) {
+	  i = (lb + ub) / 2;
+	  if (A[i] < k)
+		  lb = i + 1;
+	  else
+		  ub = i;
+  }
+  printf("%d\n", ub);
   return 0;
 }
