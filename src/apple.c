@@ -22,13 +22,13 @@ int main(){
     scanf("%d", &A[i]);
   }
 
-  lb = A[0], ub = A[n - 1];
-  while (lb != ub) {
+  lb = A[0] - 1, ub = A[n - 1];
+  while (lb + 1 < ub) {
 	  i = (lb + ub) / 2;
 	  if (is_ok(i))
 		  ub = i;
 	  else
-		  lb = i + 1;
+		  lb = i;
   }
   printf("%d\n", ub);
   return 0;
