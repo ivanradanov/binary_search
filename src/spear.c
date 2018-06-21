@@ -24,7 +24,7 @@ int main(){
     scanf("%d", &A[i]);
   }
 
-  lb = 0, ub = A[n - 1];
+  lb = 0, ub = A[n - 1] + 1;
   while (lb + 1 < ub) {
 	  i = (lb + ub) / 2;
 	  if (is_ok(i))
