@@ -17,12 +17,14 @@ int is_ok(int p)
 
 int main(){
   int i, lb, ub;
+  int max = 0;
   scanf("%d%d", &n, &k);
   for(i = 0; i < n; i++){
     scanf("%d", &A[i]);
+    if (A[i] > max) max = A[i];
   }
 
-  lb = 0, ub = A[n - 1] + 1;
+  lb = 0, ub = max + 1;
   while (lb + 1 < ub) {
 	  i = (lb + ub) / 2;
 	  if (is_ok(i))

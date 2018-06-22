@@ -17,12 +17,12 @@ int is_ok(int p)
 
 int main(){
   int i, lb, ub;
-  int min = 0, max = 1000000000;
+  int min = 1000000000, max = 0;
   scanf("%d%d", &n, &k);
   for(i = 0; i < n; i++){
     scanf("%d", &A[i]);
     if (A[i] > max) max = A[i];
-    else if (A[i] < min) min = A[i];
+    if (A[i] < min) min = A[i];
   }
 
   lb = min - 1, ub = max;
