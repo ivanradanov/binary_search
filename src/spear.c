@@ -6,8 +6,6 @@ int A[100000];
 
 int is_ok(int p)
 {
-	if (p == 0)
-		return 1;
 	int sum = 0;
 	for (int i = 0; i < n; i++) {
 		sum += A[i] / p;
